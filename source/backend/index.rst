@@ -30,6 +30,7 @@ Folder Structure
  
    setup
    tests
+   database
 
 ----
 
