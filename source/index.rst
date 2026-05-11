@@ -1,17 +1,20 @@
-.. SFT documentation master file, created by
-   sphinx-quickstart on Tue Apr 28 15:35:15 2026.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Student Finance Tracker
+=======================
 
-SFT documentation
-=================
+.. image:: https://img.shields.io/badge/version-1.0-blue
+   :alt: Version 1.0
+
+Welcome to the **Student Finance Tracker (SFT)** documentation.
+Use the navigation on the left to explore the docs, or start with the links below.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Getting Started
 
-  intro
-  
-  backend/index.rst
+   intro
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Backend
 
+   backend/index
