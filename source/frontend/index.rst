@@ -24,6 +24,14 @@ Folder Structure
     │   │   ├── BudgetHelpers.ts
     │   │   ├── Budget.styles.ts
     │   │   └── EditBudgetsModal.tsx
+    │   ├── Dashboard/
+    │   │   ├── Dashboard.tsx
+    │   │   ├── Dashboardcomponents.tsx
+    │   │   ├── Dashboardhelpers.ts
+    │   │   └── DashBoard.styles.ts
+    │   ├── AIAdvisor/
+    │   │   ├── AIAdvisor.tsx
+    │   │   └── AIAdvisorApi.ts
     │   └── Goals/
     │       ├── Goals.tsx
     │       ├── Goalscomponents.tsx
@@ -39,3 +47,5 @@ Folder Structure
 
    budget_page
    goals_page
+   dashboard_page
+   ai_page
