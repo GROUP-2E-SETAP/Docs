@@ -15,6 +15,12 @@ Use the navigation on the left to explore the docs, or start with the links belo
 
 .. toctree::
    :maxdepth: 2
+   :caption: Frontend
+
+   frontend/index
+
+.. toctree::
+   :maxdepth: 2
    :caption: Backend
 
    backend/index
