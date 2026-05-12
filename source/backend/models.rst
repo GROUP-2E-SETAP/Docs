@@ -11,7 +11,7 @@ The application uses two databases:
 - **PostgreSQL** — the primary relational database, accessed via the ``sql`` tagged template from ``psql.js``
 - **MongoDB** — a NoSQL store accessed via Mongoose, used for notifications and user data
 
-The models folder contains three files:
+The models folder contains four files:
 
 ===================== =============================================
 File                  Purpose
@@ -19,6 +19,7 @@ File                  Purpose
 ``index.js``          PostgreSQL User class with static query methods
 ``user.js``           Mongoose schema and model for User documents
 ``Notifications.js``  Mongoose schema and model for Notification documents
+``transaction.js``    PostgreSQL functions for creating, fetching and deleting transactions
 ===================== =============================================
 
 ---------
@@ -230,6 +231,99 @@ Field        Type      Required  Notes
      message: 'You have exceeded your monthly food budget.',
      priority: 'high'
    });
+
+---------
+
+transaction.js — PostgreSQL Transaction Model
+----------------------------------------------
+
+This file provides three exported async functions for managing transaction records
+in the PostgreSQL ``transactions`` table. It uses the ``sql`` tagged template literal
+from the project's PostgreSQL config.
+
+**Import:**
+
+.. code-block:: javascript
+
+   import { createTrxModal, getTrxModal, deleteTrxModal } from '../models/transaction.js';
+
+Functions
+^^^^^^^^^
+
+createTrxModal
+""""""""""""""
+
+Inserts a new transaction record into the ``transactions`` table.
+
+**Parameters:**
+
+- ``userId`` *(integer)* — the ID of the user creating the transaction
+- ``categoryId`` *(integer)* — the ID of the category for this transaction
+- ``amount`` *(decimal)* — the monetary amount of the transaction
+- ``description`` *(string)* — a text description of the transaction
+- ``date`` *(string, optional)* — the transaction date. Defaults to the current date and time if not provided
+
+**Returns:** The newly created transaction object.
+
+**Example:**
+
+.. code-block:: javascript
+
+   const transaction = await createTrxModal(1, 3, 49.99, 'Groceries', '2026-05-12');
+   console.log(transaction);
+   // { id: 101, user_id: 1, category_id: 3, amount: 49.99, ... }
+
+---------
+
+getTrxModal
+"""""""""""
+
+Retrieves all transactions for a given user, joined with their category name and type,
+ordered from newest to oldest.
+
+**Parameters:**
+
+- ``userId`` *(integer)* — the ID of the user whose transactions to fetch
+
+**Returns:** An array of transaction objects, each containing:
+
+- ``id`` — transaction ID
+- ``user_id`` — the user's ID
+- ``category_id`` — the category ID
+- ``type`` — the category type (e.g. ``income``, ``expense``)
+- ``name`` — the category name
+- ``amount`` — the monetary amount
+- ``description`` — the text description
+- ``date`` — the transaction date
+- ``created_at`` — when the record was created
+- ``updated_at`` — when the record was last updated
+
+**Example:**
+
+.. code-block:: javascript
+
+   const transactions = await getTrxModal(1);
+   transactions.forEach(t => console.log(t));
+
+---------
+
+deleteTrxModal
+""""""""""""""
+
+Deletes a single transaction by its ID.
+
+**Parameters:**
+
+- ``transactionId`` *(integer)* — the ID of the transaction to delete
+
+**Returns:** The deleted transaction object, or ``undefined`` if no match was found.
+
+**Example:**
+
+.. code-block:: javascript
+
+   const deleted = await deleteTrxModal(101);
+   console.log(deleted); // { id: 101, ... }
 
 ---------
 

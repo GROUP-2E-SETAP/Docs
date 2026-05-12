@@ -32,6 +32,10 @@ Folder Structure
    tests
    database
    models
-
+   routes
+   middleware
+   validators
+   utils
+   
 ----
 
