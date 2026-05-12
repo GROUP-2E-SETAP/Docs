@@ -36,6 +36,6 @@ Folder Structure
    middleware
    validators
    utils
-   
+   config
 ----
 
