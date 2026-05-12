@@ -33,5 +33,8 @@ Folder Structure
    routes
    database 
    middleware
+   validators
+   utils
+   
 ----
 
