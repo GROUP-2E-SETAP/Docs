@@ -49,3 +49,4 @@ Folder Structure
    goals_page
    dashboard_page
    ai_page
+   transactions_page
