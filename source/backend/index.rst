@@ -31,6 +31,7 @@ Folder Structure
    setup
    tests
    database
+   models
 
 ----
 
