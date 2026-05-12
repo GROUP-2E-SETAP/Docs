@@ -17,7 +17,7 @@ The validator files are stored in:
 Validation Library
 ------------------
 
-The backend uses **Joi** for validation. Joi allows defining schemas that describe the expected shape and constraints of request data.
+The backend uses **Joi** for validation. Joi allows schemas to be created for different request bodies, such as registration, login, password reset, and device information.
 
 .. code-block:: javascript
 
@@ -98,7 +98,7 @@ Error Response Format
 
 When validation fails, the middleware returns a structured JSON response.
 
-Exmaple:
+Example:
 
 .. code-block:: json
 
