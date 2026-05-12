@@ -31,5 +31,6 @@ Folder Structure
    setup
    tests
    routes
+   database 
 ----
 
