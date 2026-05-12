@@ -8,9 +8,7 @@ Prerequisites
 
 Make sure you have the following installed:
 
-Node -- v24.12.0 or higher
-
-------------------------
+- Node v24.12.0 or higher
 
 Installation
 ------------
@@ -40,76 +38,69 @@ Installation
 
       npm start
 
-----------------------
-
 Environment Variables
-------------------------
+---------------------
 
-.. code-block:: bash 
-  
-  file : .env.example 
-  # Server Configuration
-  NODE_ENV=development
-  PORT=3000
+.. code-block:: bash
 
-  # For Neon or hosted PostgreSQL:
-  POSTGRES_URI=postgresql://user:password@host.region.neon.tech/dbname?sslmode=require
+   # file: .env.example
 
-  # For MongoDB Atlas:
-  MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/setap_transactions?retryWrites=true&w=majority
+   # Server Configuration
+   NODE_ENV=development
+   PORT=3000
 
-  # JWT Secrets (Change these to random secure strings!)
-  JWT_SECRET=your_super_secure_jwt_secret_change_this
-  JWT_REFRESH_SECRET=your_super_secure_refresh_secret_change_this
-  JWT_EXPIRES=15m
-  JWT_REFRESH_EXPIRES=7d
+   # For Neon or hosted PostgreSQL:
+   POSTGRES_URI=postgresql://user:password@host.region.neon.tech/dbname?sslmode=require
 
-  # Redis ( for token blacklist and caching)
-  REDIS_HOST=localhost
-  REDIS_PORT=6379
-  REDIS_PASSWORD=
+   # For MongoDB Atlas:
+   MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/setap_transactions?retryWrites=true&w=majority
 
-  # Email Service (for notifications)
-  EMAIL_SERVICE=gmail
-  EMAIL_USER=your-email@gmail.com
-  EMAIL_PASSWORD=your-app-specific-password
+   # JWT Secrets (Change these to random secure strings!)
+   JWT_SECRET=your_super_secure_jwt_secret_change_this
+   JWT_REFRESH_SECRET=your_super_secure_refresh_secret_change_this
+   JWT_EXPIRES=15m
+   JWT_REFRESH_EXPIRES=7d
 
-  # External API Keys
-  AI_API_KEY=your_openai_api_key
+   # Redis (for token blacklist and caching)
+   REDIS_HOST=localhost
+   REDIS_PORT=6379
+   REDIS_PASSWORD=
 
-  # CORS Configuration
-  CORS_ORIGIN=http://localhost:3000
+   # Email Service (for notifications)
+   EMAIL_SERVICE=gmail
+   EMAIL_USER=your-email@gmail.com
+   EMAIL_PASSWORD=your-app-specific-password
 
-  # Encryption
-  ENCRYPTION_KEY=your_32_character_encryption_key
+   # External API Keys
+   AI_API_KEY=your_openai_api_key
 
-  # Rate Limiting
-  RATE_LIMIT_WINDOW_MS=900000
-  RATE_LIMIT_MAX_REQUESTS=100
-    
+   # CORS Configuration
+   CORS_ORIGIN=http://localhost:3000
 
---------------------------------
+   # Encryption
+   ENCRYPTION_KEY=your_32_character_encryption_key
 
+   # Rate Limiting
+   RATE_LIMIT_WINDOW_MS=900000
+   RATE_LIMIT_MAX_REQUESTS=100
 
-Databases 
+Databases
 ---------
 
-We use PostgreSQL with *Neon* and *MongoDB Atlas*
+We use PostgreSQL with *Neon* and *MongoDB Atlas*.
 
 Neon Setup
 ~~~~~~~~~~
 
-Instructions @ https://console.neon.tech/app/
+Instructions at https://console.neon.tech/app/
 
-MongoDB Setup 
+MongoDB Setup
 ~~~~~~~~~~~~~
 
-Instructions @  https://www.mongodb.com/
-
----------------------------
+Instructions at https://www.mongodb.com/
 
 API Reference
---------------
+-------------
 
 Base URL
 ~~~~~~~~
