@@ -116,4 +116,4 @@ Each error object contains the field name and a human-readable message describin
 Summary
 -------
 
-Validators ensure that all incoming request data meets the required format and constraints before reaching the controller. By centralising validation logic in dedicated files and using Joi schemas, the backend enforces consistent rules across all endpoints and returns clear, structured error messages to the client.
+Before any incoming request data reaches the controller, validators make sure it satisfies the necessary format and constraints. The backend enforces consistent rules across all endpoints and provides the client with clear, organised error messages by centralising validation code in dedicated files and utilising Joi schemas.
