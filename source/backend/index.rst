@@ -32,5 +32,6 @@ Folder Structure
    tests
    routes
    database 
+   middleware
 ----
 
