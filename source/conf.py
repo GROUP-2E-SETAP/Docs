@@ -19,15 +19,12 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
-# Show todo items in output
 todo_include_todos = True
 
-# Intersphinx: link to Python docs
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3', None),
 }
 
-# -- Options for HTML output -------------------------------------------------
 
 # pip install furo
 html_theme = 'furo'
@@ -51,7 +48,6 @@ html_theme_options = {
 
 html_static_path = ['_static']
 
-# -- Napoleon settings -------------------------------------------------------
 
 napoleon_google_docstring = True
 napoleon_numpy_docstring = True
