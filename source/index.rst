@@ -18,4 +18,15 @@ Use the navigation on the left to explore the docs, or start with the links belo
    :caption: Backend
 
    backend/index
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: MachineLearning
+
    machine_learning/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Frontend
+
+   frontend/index
