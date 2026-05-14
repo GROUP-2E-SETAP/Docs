@@ -25,8 +25,12 @@ Folder Structure
    :caption: Backend Docs
 
    setup
+   config
+   middleware
    routes
    database
+   models
+   validators
    auth 
    transaction 
    category
