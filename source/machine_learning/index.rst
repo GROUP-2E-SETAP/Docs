@@ -18,3 +18,13 @@ Folder Structure
     │   ├── training.py
     └── ml-predictor-client.js 
 -----------------
+
+.. toctree::
+   :maxdepth: 2
+   :caption: ML Docs
+
+   setup 
+   api
+   predictor
+   training
+   client

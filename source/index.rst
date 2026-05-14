@@ -18,3 +18,4 @@ Use the navigation on the left to explore the docs, or start with the links belo
    :caption: Backend
 
    backend/index
+   machine_learning/index
